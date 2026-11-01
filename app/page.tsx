@@ -202,7 +202,7 @@ export default function Home() {
           <p className="hero-description">Lulusan Informatika yang membangun aplikasi web, merancang kebutuhan produk, dan mendukung operasional digital dengan pendekatan yang rapi serta terukur.</p>
           <div className="actions">
             <a className="button primary" href="#proyek">Jelajahi proyek <Icon name="arrow" /></a>
-            <a className="button quiet" href="/Rizki_Mulyawan_CV.docx" download><Icon name="download" /> Unduh CV</a>
+            <a className="button quiet" href="https://drive.google.com/file/d/1jIJiz5rH65NYHfFv1irge55N4Q8njrSb/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><Icon name="download" /> Unduh CV</a>
           </div>
           <div className="hero-tech" aria-label="Teknologi utama">
             {["HTML", "CSS", "JavaScript"].map((technology) => <div className="hero-tech-item" key={technology}><TechnologyLogo name={technology} /><span>{technology}</span></div>)}
@@ -312,7 +312,7 @@ export default function Home() {
           <p>Terbuka untuk setiap kesempatan.</p>
           <a className="email" href="mailto:rizkymgite@gmail.com">rizkymgite@gmail.com <Icon name="arrow" /></a>
           <div className="contact-links"><External href={links.github}>GitHub</External><External href={links.whatsapp}>WhatsApp</External></div>
-          <footer>© 2026 Rizki Mulyawan · Portfolio profesional</footer>
+          <footer>© 2026 Rizki Mulyawan · Portofolio</footer>
         </div>
       </section>
     </main>
