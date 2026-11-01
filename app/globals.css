@@ -6,14 +6,15 @@
   --paper: #fbfcfe;
   --muted: #64728a;
   --line: #dce5f1;
-  --mono: var(--font-dm-mono), monospace;
-  --sans: var(--font-dm-sans), sans-serif;
-  --serif: var(--font-playfair-display), Georgia, serif;
+  --sans: var(--font-poppins), Arial, sans-serif;
+  --mono: var(--sans);
+  --serif: var(--sans);
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); }
+button, input, select, textarea { font: inherit; }
 a { color: inherit; text-decoration: none; }
 a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
 p { color: var(--muted); font-size: 15px; line-height: 1.75; }
@@ -65,7 +66,7 @@ p { color: var(--muted); font-size: 15px; line-height: 1.75; }
 .hello { margin: 38px 0 6px; font-size: 16px; }
 h1, h2, h3 { margin: 0; color: var(--ink); }
 h1 { font-size: clamp(56px, 7vw, 94px); font-weight: 600; letter-spacing: -.075em; line-height: .96; }
-em { color: var(--blue); font-family: var(--serif); font-weight: 500; }
+em { color: var(--blue); font-family: var(--serif); font-style: italic; font-weight: 500; }
 .hero-role { margin: 26px 0 0; color: #314d80; font-size: 17px; font-weight: 600; }
 .hero-role span { margin: 0 7px; color: #8da2c4; }
 .hero-description { max-width: 540px; margin: 16px 0 0; }
@@ -85,8 +86,8 @@ em { color: var(--blue); font-family: var(--serif); font-weight: 500; }
 .technology-logo-fallback { width: 23px; height: 23px; border-radius: 5px; color: #627b9f; background: #dce8f8; font-family: var(--mono); font-size: 8px; font-weight: 700; }
 .hero-visual { display: grid; min-height: 555px; place-items: center; }
 .hero-glow { position: absolute; top: 50%; left: 50%; width: min(46vw, 550px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(153, 183, 238, .45), rgba(220, 232, 252, .2) 58%, transparent 70%); animation: glow-drift 18s ease-in-out infinite alternate; transform: translate(-50%, -50%); }
-.portrait-frame { position: relative; display: grid; width: min(40vw, 495px); height: 535px; place-items: end center; overflow: hidden; border: 1px solid rgba(255, 255, 255, .9); border-radius: 46% 46% 22px 22px; background: linear-gradient(155deg, #dce8fb, #b8cbed); box-shadow: 0 28px 65px rgba(30, 66, 131, .17); }
-.portrait { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center bottom; }
+.portrait-frame { position: relative; display: grid; width: clamp(380px, 41vw, 550px); max-width: 100%; aspect-ratio: .925; place-items: end center; overflow: hidden; border: 1px solid rgba(255, 255, 255, .9); border-radius: 46% 46% 22px 22px; background: linear-gradient(155deg, #dce8fb, #b8cbed); box-shadow: 0 28px 65px rgba(30, 66, 131, .17); }
+.portrait { position: absolute; inset: auto auto 0 50%; width: 112%; height: 112%; object-fit: contain; object-position: center bottom; transform: translateX(-50%); }
 .portrait-stamp { position: absolute; right: -1%; bottom: 76px; display: flex; align-items: center; gap: 9px; padding: 12px 15px; border: 1px solid rgba(215, 225, 240, .9); border-radius: 11px; background: rgba(255, 255, 255, .92); box-shadow: 0 12px 30px rgba(37, 65, 110, .12); color: #475a77; font-size: 10px; font-weight: 600; }
 .stamp-dot { width: 8px; height: 8px; border-radius: 50%; background: #61aa80; box-shadow: 0 0 0 4px #e6f4eb; }
 .hero-caption { position: absolute; right: 7%; bottom: 0; left: 7%; display: flex; justify-content: space-between; color: #7285a5; font-family: var(--mono); font-size: 9px; letter-spacing: .04em; }
@@ -221,7 +222,7 @@ h2 { max-width: 760px; margin-top: 18px; font-size: clamp(36px, 4.2vw, 62px); fo
   .hero { min-height: 740px; }
   .hero-inner { grid-template-columns: minmax(0, 1fr) minmax(0, .95fr); }
   .hero-visual { min-height: 480px; }
-  .portrait-frame { width: min(42vw, 430px); height: 465px; }
+  .portrait-frame { width: min(42vw, 430px); aspect-ratio: .925; }
   .skills-grid, .certificate-grid { grid-template-columns: repeat(2, 1fr); }
   .project-card { flex-basis: calc((100% - 16px) / 2); max-width: calc((100% - 16px) / 2); }
   .project-card { min-height: 0; }
@@ -252,7 +253,8 @@ h2 { max-width: 760px; margin-top: 18px; font-size: clamp(36px, 4.2vw, 62px); fo
   .hero-glow { width: min(82vw, 370px); }
   .hero-glow { animation-duration: 24s; }
   .hero-glow { animation: none; }
-  .portrait-frame { width: min(78vw, 340px); height: 375px; }
+  .portrait-frame { width: min(78vw, 340px); height: 375px; aspect-ratio: auto; }
+  .portrait { inset: 0; width: 100%; height: 100%; transform: none; }
   .portrait-stamp { right: 0; bottom: 58px; }
   .hero-caption { right: 2%; bottom: 2px; left: 2%; }
   .about { padding: 82px 24px; }
