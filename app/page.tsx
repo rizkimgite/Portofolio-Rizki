@@ -195,7 +195,7 @@ export default function Home() {
       <section id="profil" className="hero anchor">
         <div className="hero-inner">
           <div className="hero-copy">
-          <span className="eyebrow">Portfolio profesional · 2026</span>
+          <span className="eyebrow">Portfolio Rizki · 2026</span>
           <p className="hello">Halo, saya</p>
           <h1>Rizki <em>Mulyawan</em></h1>
           <p className="hero-role">Junior Front End Specialist <span>/</span> Web Developer</p>
@@ -312,7 +312,7 @@ export default function Home() {
           <p>Terbuka untuk setiap kesempatan.</p>
           <a className="email" href="mailto:rizkymgite@gmail.com">rizkymgite@gmail.com <Icon name="arrow" /></a>
           <div className="contact-links"><External href={links.github}>GitHub</External><External href={links.whatsapp}>WhatsApp</External></div>
-          <footer>© 2026 Rizki Mulyawan · Portofolio</footer>
+          <footer>&copy; 2026 Portofolio Rizki</footer>
         </div>
       </section>
     </main>
