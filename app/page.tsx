@@ -198,11 +198,11 @@ export default function Home() {
           <span className="eyebrow">Portfolio Rizki · 2026</span>
           <p className="hello">Halo, saya</p>
           <h1>Rizki <em>Mulyawan</em></h1>
-          <p className="hero-role">Junior Front End Specialist <span>/</span> Web Developer</p>
+          <p className="hero-role">Junior Front-End Developer <span>|</span> Digital Entrepreneurship</p>
           <p className="hero-description">Lulusan Informatika yang membangun aplikasi web, merancang kebutuhan produk, dan mendukung operasional digital dengan pendekatan yang rapi serta terukur.</p>
           <div className="actions">
             <a className="button primary" href="#proyek">Jelajahi proyek <Icon name="arrow" /></a>
-            <a className="button quiet" href="https://drive.google.com/file/d/1jIJiz5rH65NYHfFv1irge55N4Q8njrSb/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><Icon name="download" /> Unduh CV</a>
+            <a className="button quiet" href="https://drive.google.com/file/d/1u2Gv0O7yf4f0siiOYcH2bucl-H5PHoHf/view?usp=sharing" target="_blank" rel="noopener noreferrer"><Icon name="download" /> Unduh CV</a>
           </div>
           <div className="hero-tech" aria-label="Teknologi utama">
             {["HTML", "CSS", "JavaScript"].map((technology) => <div className="hero-tech-item" key={technology}><TechnologyLogo name={technology} /><span>{technology}</span></div>)}
