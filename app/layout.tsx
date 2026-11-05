@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Poppins } from "next/font/google";
 import siteIcon from "../img/icon.png";
 import LoadingScreen from "./loading-screen";
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <LoadingScreen />
         <MotionEnhancer />
         {children}
+        <Analytics />
       </body>
     </html>
   );
